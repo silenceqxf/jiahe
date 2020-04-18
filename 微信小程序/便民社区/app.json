@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/forum/forum",
+    "pages/my/my",
+    "pages/my_info/my_info",
+    "pages/my_repairs/my_repairs",
+    "pages/my_clean/my_clean",
+    "pages/my_rent/my_rent",
+    "pages/second_level/notice/notice",
+    "pages/second_level/notice/message/message",
+    "pages/second_level/repairs/repairs",
+    "pages/second_level/clean/clean",
+    "pages/second_level/clean/order/orderAddress/orderAddress",
+    "pages/second_level/clean/order/orderProducts/orderProducts",
+    "pages/second_level/rent/rent",
+    "pages/second_level/rent/order/order",
+    "pages/second_level/phone_number/phone_number",
+    "pages/second_level/suggest/suggest"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "安昕雅苑",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "小区动态",
+        "iconPath": "images/forum.png",
+        "selectedIconPath": "images/forum1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my1.png"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

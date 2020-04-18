@@ -1,0 +1,11 @@
+<!--pages/second_level/phone_number/phone_number.wxml-->
+<view class="phone_numbers_title">常用电话</view>
+  <view class="phone_numbers_main">
+    <block wx:for="{{phone_numbers}}">
+      <view class="single_number">
+        <text class="single_number_organization">{{item.organization}}</text>
+        <text data-phone-num="{{item.num}}" class="single_number_num"                       bindtap="call">{{item.num}}
+        </text>
+      </view>
+    </block>
+  </view>

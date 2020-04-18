@@ -1,0 +1,29 @@
+<!--pages/second_level/clean/clean.wxml-->
+<view class="clean_section">
+  <!--顶部图片-->
+  <image class="banner" mode="aspectFill" src="../../../images/banner1.jpg" class="slide_image"/>
+  <!-- 标题 -->
+  <view class="title">
+    <text>—— </text>
+    <text>热门服务</text>
+    <text> ——</text>
+  </view>
+
+  <!--listview数据--> 
+  <block wx:for="{{products}}" wx:for-item="product" wx:key="p_id">
+    <!--一条-->
+    <view class="list_item" data-id="{{product.p_id}}" bindtap="itemClick">
+      <view class="list_item_left"> 
+        <image class="list_item_left_icon" src="{{img220}}/{{product.p_icon}}?version={{version}}"></image>
+      </view>
+      <view class="list_item_right"> 
+        <view class="item_name cc">{{product.p_title}}</view>
+        <view class="item_price cc ">
+          <label class="p_price">￥{{product.p_price}}</label>
+          <label class="p_duration">{{product.p_duration}}小时</label>
+        </view>
+        <view class="item_desc cc">{{product.p_summary}}</view>
+      </view>
+    </view> 
+  </block>
+</view>

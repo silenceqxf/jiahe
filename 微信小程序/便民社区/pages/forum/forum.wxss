@@ -1,0 +1,264 @@
+/* pages/forum/forum.wxss */
+.forum_section{
+  width:100%;
+}
+
+/* .top_cc{
+  width:300rpx;
+  height:80rpx;
+  border:1px solid red;
+  position: absolute;
+  background:rgba(0,0,0,0.6);
+  border-radius: 3px;
+} */
+
+.top-right{
+  width:70rpx;
+  height:70rpx;
+  position:absolute;
+  right:50rpx;
+  top:50rpx;
+  border-radius: 80rpx;
+  overflow:hidden;
+  opacity: 0.8;
+  z-index:9999;
+}
+
+.baseimg{
+  width:100%;
+  height:100%;
+}
+
+.oneImg{
+  width:auto;
+  height:auto;
+  /*margin-left:100rpx;*/
+  overflow:hidden;
+}
+
+.images-image {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 10rpx;
+}
+
+.bg{
+  height: 400rpx;
+  overflow:hidden;
+}
+
+.headimg{
+  width: 150rpx;
+  height: 150rpx;
+  position:absolute;
+  border: 2px solid #fff;
+  margin-top: -100rpx;
+  margin-left: 570rpx;
+  overflow:hidden;
+} 
+
+.nickName{
+  width:400rpx;
+  text-align: right;
+  position:absolute;
+  color:#fff;
+  margin-top: -70rpx;
+  margin-left: 150rpx; 
+  font-size:14pt;
+  font-weight:600; 
+}
+
+.lie{
+  margin-top: 100rpx;
+  flex-direction: column;
+}
+
+/*列表*/
+.forumList{
+  background-color:white;
+  margin-bottom:1px;
+  border-bottom:2px solid #f0f0f0;
+  /* border-top:1px solid #f0f0f0; */
+}
+
+.body_view{
+  display:flex;
+}
+.left_view{
+  width:150rpx;
+}
+.right_view{
+  margin-right:10rpx;
+}
+/*头像*/
+.userAvatar{
+  width:100rpx;
+  height:100rpx;
+  margin:30rpx 20rpx 0 20rpx;
+  border-radius:50%;
+}
+/*昵称*/
+.nickname{
+  display:flex;
+  height:50rpx;
+  line-height:50rpx;
+  font-size:15px;
+  color:rgb(88,103,138);
+  margin:30rpx 0 0 10rpx;
+}
+/*内容*/
+.userContent{
+  display:flex;
+  font-size:15px;
+  line-height:50rpx;
+  margin-left:10rpx;
+}
+/*图片*/
+.photo_view{
+  background-color:rebeccapurple;
+  margin-left:10rpx;
+  margin-bottom:20rpx;
+}
+.photo{
+  background:rgb(255,166,0);
+  float:left;
+  margin-right:10rpx;
+  margin-top:10rpx;
+}
+/*地理位置*/
+.address_view{
+  display:flex;
+  margin-top:20rpx;
+  width:100%;
+}
+.address_view label{
+  font-size:12px;
+  margin:10rpx;
+}
+/* 时间、删除、点赞评论*/
+.TDD_view{
+  width:100%;
+  height:60rpx;
+  display:flex;
+  align-items:center;
+  background:white;
+}
+.TDD_view label{
+  font-size:13px;
+  margin-left:10rpx;
+  width:45%;
+}
+.TDD_view button{
+  font-size:13px;
+  margin-left:20rpx;
+  color:black;
+  font-weight:normal;
+  background:white;
+  text-align:left;
+  display:flex;
+}
+.TDD_view button::after{
+  border:white;
+}
+.TDD_view image{
+  width:50rpx;
+  height:40rpx;
+  margin-right:20rpx;
+}
+
+/*点赞*/
+.dianzan
+{
+  position:absolute;
+  width:90rpx;
+  border-right: 1px solid #ccc;
+  top:5rpx;
+  left:0;
+  text-align:center;
+}
+
+.dianzan_view{
+  width:100%;
+  background:white;
+  margin-bottom:20rpx;
+}
+.trigon_view{
+  margin-bottom:-15rpx;
+}
+.trigon{
+  display:flex;
+  width:40rpx;
+  height:20rpx;
+  margin-top:10rpx;
+  margin-left:10rpx;
+}
+.dianzan_bg_view{
+  display:inline-block;
+  width:97%;
+  background:rgb(235,235,235);
+  margin-right:20rpx;
+  margin-bottom:-11rpx;
+  border-top-left-radius:7rpx;
+  border-top-right-radius:7rpx;
+}
+.dianzan_user_view{
+  display:flex;
+  float:left;
+  height:40rpx;
+  margin-left:10rpx;
+  align-content:center;
+}
+.zanUser{
+  font-size:12px;
+  line-height:40rpx;
+  height:40rpx;
+  color:rgb(88,103,138);
+}
+.line{
+  width:97%;
+  height:1px;
+  background:white;
+}
+
+/*评论*/
+.pinglun
+{
+  position:absolute;
+  width:90rpx;
+  border-left: 1px solid #ccc;
+  left:100rpx;
+  top:5rpx;
+  text-align:center;
+}
+
+.discuss_view{
+  background:white;
+  width:97%;
+}
+.discuss{
+  background:rgb(235,235,235);
+  line-height:35rpx;
+}
+.discuss label{
+  font-size:12px;
+}
+.discussUser{
+  color:rgb(88,103,138);
+  margin-left:10rpx;
+}
+.content{
+  margin-left:10rpx;
+}
+/*弹出框*/
+.popUpBox{
+  position:absolute;
+  height:40rpx;
+  border-radius:2px;
+  right:35rpx;
+  bottom:0rpx;
+  background:rgba(0,0,0,0.5);
+  font-size:12px;
+  color:#fff;
+  font-weight:600;
+  overflow:hidden;
+}

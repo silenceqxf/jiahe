@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {},
+  "navigationBarBackgroundColor":"#ffffff",
+  "navigationBarTextstyle":"black",
+  "navigationBarTitleText":"通知公告"
+}

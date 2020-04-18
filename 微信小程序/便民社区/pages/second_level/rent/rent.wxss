@@ -1,0 +1,96 @@
+/* pages/second_level/rent/rent.wxss */
+page{
+  background-color:#f0f0f0;
+}
+.banner{
+  background-color:#fff;
+  width:100%;
+  height:300rpx;
+  text-align:center;
+  padding:20rpx 0;
+}
+.slide_image{
+  width:100%;
+  height:300rpx;
+}
+.notice text,
+.notice image{
+  display:inline-block;
+  vertical-align:middle;
+}
+.notice image{
+  height:32rpx;
+  width:32rpx;
+  margin:0 20rpx 0 40rpx;
+}
+.notice text{
+  max-width:80%;
+  font-size:32rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.goods_group{
+  margin-top:20rpx;
+  background-color:#f0f0f0;
+  text-align:center;
+}
+.goods_group .title{
+  margin-bottom:10rpx;
+  font-size:26rpx;
+}
+.goods{
+  display:inline-block;
+  padding:30rpx 0;
+  vertical-align:top;
+  width:49.5%;
+  background-color:#fff;
+  margin-bottom:10rpx;
+}
+.goods:nth-child(odd){
+  margin-left:.5%;
+}
+.goods:nth-child(even){
+  margin-right:.5%;
+}
+.goods image{
+  width:100%;
+  height:300rpx;
+}
+.goods_name{
+  width:100%;
+  word-break:break-all;/*允许在单词内换行*/
+  display:-webkit-box;/*将对象作为弹性伸缩盒子模型显示 */
+  -webkit-line-clamp:2;/*限制在一个块元素显示的文本的行数*/
+  -webkit-box-orient:vertical;/*伸缩盒对象的子元素的排列方式为竖排*/
+  overflow:hidden;
+  margin:20rpx 0;
+}
+.goods_price{
+  color:red;
+  padding-left:50rpx;
+  display:block;
+  float:left;
+}
+.goods_amount{
+  color:gray;
+  padding-right:50rpx;
+  display:block;
+  float:right;
+  font-size:14px;
+}
+.deal{
+  width:76rpx;
+  height:56rpx;
+  float:right;
+  margin:15rpx 40rpx 15rpx 0;
+  background-color:#5fdbfa;
+  border-radius:10rpx 8rpx;
+}
+.deal text{
+  width:76rpx;
+  height:56rpx;
+  justify-content:right;
+  font-size:15px;
+  color:white;
+}

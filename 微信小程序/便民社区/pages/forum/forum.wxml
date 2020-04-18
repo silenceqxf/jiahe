@@ -1,0 +1,93 @@
+<!--pages/forum/forum.wxml-->
+<scroll-view class="forum_section">
+   <!-- 右上角发布小图标-->
+  <view class="top-right" bindtap="bindAdd" bindtap="scrollHandle" animation="{{animationData1}}" >
+    <image class="baseimg" src="../../images/add.png" mode="scaleToFill" catchtap="bindAdd"></image>
+  </view>
+
+  <!--背景小图标-->
+  <view class="bg">
+      <image class="baseimg" src="../../images/forumbg.jpg" mode="scaleToFill"></image>
+  </view>
+
+  <!--背景图底部大头像-->
+  <view class="headimg">
+      <image class="baseimg" src="{{userInfo.avatarUrl}}" mode="scaleToFill"></image>
+  </view>
+
+  <!--背景图底部昵称-->
+  <view class="nickName">
+    <text>{{userInfo.nickName}}</text>
+  </view>
+
+  <!--占位行-->
+  <view class="lie"></view>
+
+  <!-- 循环列表 -->
+  <view class="forumList" wx:for="{{DataSource}}">
+    <view class="body_view">
+      <view class="left_view">
+        <image class="userAvatar" src="{{avatar}}"/>
+      </view>
+      <view class="right_view">
+
+        <view class="nickname_view">
+          <label class="nickname">{{nickname}}</label>
+        </view>
+
+        <!-- 内容 -->
+        <view class="content_view">
+          <text class="userContent">{{content}}</text>
+        </view>
+
+        <!-- 图片 -->
+        <view class="photo_view">
+          <view class="photo" wx:for="{{resource}}" style="width:{{photoWidth}}px;height:{{photoWidth}}px">
+            <image bindtap="lookPhoto" data-photoUrl="{{item}}" src="{{item}}" style="width:{{photoWidth}}px;height:{{photoWidth}}px"/>
+          </view>
+        </view>
+
+       <!-- 地理位置 -->
+        <view class="address_view">
+          <label>{{address}}</label>
+        </view>
+
+        <!-- 时间、删除按钮、显示操作小图标-->
+        <view class="TDD_view">
+          <label>{{createtime}}</label>
+          <button bindtap="delete">删除</button>
+           <image data-isShow="{{isShow}}" bindtap="touchDiscuss" src="../../images/wxdiscuss.png"></image>
+        </view>
+
+        <!-- 点赞 -->
+        <view class="dianzan_view">
+          <view class="trigon_view">
+            <image mode="aspectFill" class="trigon" src="../../images/trigon.png"/>
+          </view>
+
+          <!--  点赞 -->
+          <view class="dianzan_bg_view">
+            <view class="dianzan_user_view" wx:for="{{zanSource}}">
+              <label bindtap="touchZanUser" data-name="{{item}}" class="zanUser">{{item}},</label>
+            </view>
+          </view>
+
+          <view class="line"></view>
+          <!-- 评论 -->
+          <view class="discuss_view">
+            <view class="discuss" wx:for="{{contnet}}">
+              <label bindtap="touchZanUser" data-name="{{item.firstname}}" class="discussUser">{{item.firstname}}:</label>
+              <label class="content">{{item.content}}</label>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 评论按钮弹出框 -->
+<view animation="{{animation}}" class="popUpBox" style="top:{{popTop}}px;width:{{popWidth}}px;">
+  <text class="dianzan" bindtap="bindDianZan">点赞</text> <text class="pinglun" bindtap="bindPingLunA">评论</text>
+</view>

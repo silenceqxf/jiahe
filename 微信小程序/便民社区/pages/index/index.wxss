@@ -1,0 +1,46 @@
+/**index.wxss**/
+.slide_image {
+  width:100%;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border-top: 1rpx solid #f0f0f0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.itemButton {
+  border: 1rpx solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  width: 250rpx;
+  height: 250rpx;
+  padding:30rpx;
+}
+.notice,.rent{
+  border-left:none;
+}
+.clean,.suggset{
+  border-right:none;
+}
+.tongzhigonggao{
+  color:#deaf39;
+}
+.weixiuguanli{
+  color: #486795;
+}
+.jiazhengfuwu{
+  color: #660099;
+}
+.tousujianyi{
+  color: #b95756;
+}
+.fangwufangchan{
+  color: #CC6633;
+}
+.dianhuahaoma{
+  color: #047058;
+}

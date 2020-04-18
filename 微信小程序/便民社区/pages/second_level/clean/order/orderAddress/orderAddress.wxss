@@ -1,0 +1,81 @@
+/* pages/second_level/clean/order/orderAddress/orderAddress.wxss */
+page{
+  background-color:#f0f0f0;
+}
+.page{
+  font-size:14px;
+  font-family: "PingFang SC","Microsoft Yahei",Arial, Helvetica, sans-serif;
+}
+.field_item{
+  display:flex;
+  flex-direction:row;
+  padding:10px;
+  border-bottom:1px #eaeaea solid;
+  background-color:#fff;
+}
+.field_item_2{
+  display:flex;
+  flex-direction:row;
+  padding:0 10px;
+}
+.field_item_label{
+  flex:1;
+}
+.field_item_val{
+  flex:3;
+}
+.field_item_val_2{
+  flex:1.5;
+}
+.val_2{
+  padding:10px 0;
+  border-bottom:1px #eaeaea solid;
+}
+.field_item_3{
+  display:flex;
+  flex-direction:row;
+  padding:10px 10px;
+  border-bottom:1px #eaeaea solid;
+}
+
+/*中间项目*/
+.pro_info{
+  margin:30rpx 0;
+  border-top:1px #d6d6d6 solid;
+  border-bottom:1px #d6d6d6 solid;
+  background-color:#fff;
+}
+.info_item{
+  display:flex;
+  flex-direction:row;
+  padding:20rpx 30rpx;
+}
+.item_left{
+  flex:1;
+}
+.item_right{
+  display:flex;
+  flex-direction:row;
+}
+.item_right_val{
+  padding:12rpx;
+}
+.p_icon{
+  width:40rpx;
+  height:40rpx;
+}
+
+/*底部按钮*/
+.footer{
+  margin:20rpx 30rpx;
+}
+.field_ok{
+  color:#eee;
+  font-size:14px;
+  height:80rpx;
+  background-color:#e84445;
+}
+.field_ok_hover{
+  background-color:#e84445;
+  opacity:0.7;
+}

@@ -1,0 +1,37 @@
+<!--pages/my_clean/my_clean.wxml-->
+<view class="page">
+  <!-- 一条 -->
+  <block wx:for="{{books}}" wx:for-item="book">
+    <view class="list_item">
+      <view class="list_item_top">
+        <view class="top_left">预约号：{{book.b_id}}</view>
+        <view class="top_right">￥{{book.b_price}}</view>
+      </view>
+      <view class="list_item_bottom">
+        <view class="list_item_left">
+          <image class="list_item_left_icon" src="{{img220}}/{{book.p_icon}}"></image>
+        </view>
+        <view class="list_item_right">
+          <view class="item_name">{{book.p_title}}</view>
+          <view class="item_time">预约时间：{{book.b_time}}</view>
+          <view class="item_operate">
+            <block wx:if="{{book.b_state === 0}}">
+              <button class="btn_cancel cc" hover_class="btn_cancel_selected" data-id="{{book.b-id}}"     bindtap="showCancelDialog">取消</button>
+            </block>
+            <block wx:elif="{{book.b_state === 1}}">
+              <view class="item_tip">管理员已应答</view>
+            </block>
+            <block wx:else>
+              <view class="item_tip">已取消</view>
+            </block>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{books.length === 0}}">
+    <view class="tip cc">暂无预约</view>
+  </block>
+</view>

@@ -1,0 +1,66 @@
+<!--pages/my/my.wxml-->
+<view class="enter">
+  <block>
+    <view bindtap="bindViewTap" class="avatar">
+      <image src="{{userInfo.avatarUrl}}" background-size="cover"/>
+    </view>
+
+    <view class="info">
+      <view class="name">{{userInfo.nickName}}</view>
+      <view class="address"><text class="user">安昕雅苑小区</text></view>
+    </view>
+  </block>
+</view>
+
+<view class="main">
+  <view class="myItems my_info">
+    <text class="iconfont gerenxinxi-"></text>
+    <text class="word">我的信息</text>
+    <navigator url="../my_info/my_info">
+      <text class="iconfont dibudaohanglan-"></text>
+    </navigator>
+  </view>
+
+  <view class="myItems my_repairs">
+    <text class="iconfont guzhangbaoxiu"></text>
+    <text class="word">报修记录</text>
+    <navigator url="../my_repairs/my_repairs">
+      <text class="iconfont dibudaohanglan-"></text>
+    </navigator>
+  </view>
+
+  <view class="myItems my_clean">
+    <text class="iconfont swticonjiazheng"></text>
+    <text class="word">家政订单</text>
+    <navigator url="../my_clean/my_clean">
+      <text class="iconfont dibudaohanglan-"></text>
+    </navigator>
+  </view>
+
+  <view class="myItems my_rent">
+    <text class="iconfont maifang"></text>
+    <text class="word">购水记录</text>
+    <navigator url="../my_rent/my_rent">
+      <text class="iconfont dibudaohanglan-"></text>
+    </navigator>
+  </view>
+
+  <!-- <view class="myItems my_suggest">
+    <text class="iconfont tousujianyi1"></text>
+     <text class="word">投诉建议</text>
+    <navigator url="../my_suggest/my_suggest">
+      <text class="iconfont dibudaohanglan-"></text>
+    </navigator>
+  </view> -->
+</view>
+
+<view class="service">
+  <view class="myItems contact_service">
+    <text class="iconfont kefu"></text>
+    <text class="word1">联系客服</text>
+    <navigator>
+      <text  class="phone" catchtap="tel">400-9915591</text>
+    </navigator>
+    <text class="iconfont dibudaohanglan-" catchtap="tel"></text>
+  </view>
+</view>

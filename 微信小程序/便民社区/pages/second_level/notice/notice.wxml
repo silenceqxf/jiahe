@@ -1,0 +1,18 @@
+<!--pages/second_level/notice/notice.wxml-->
+<view class="notice_main">
+  <block wx:for="{{messages}}">
+    <navigator class="notice" url="message/message?id={{item.id}}">
+      <view class="notice_head">
+        <image class="userinfo_avatar" src="{{userInfo.avatarurl}}"/>
+        <view class="userinfo">
+          <text class="userinfo_nickname">{{item.author}}</text>
+          <text class="date">{{item.date}}</text>
+        </view>
+      </view>
+      <view class="notice_body">
+        <text>{{item.title}}</text>
+        <image src="{{item.cover}}"/>
+      </view>
+    </navigator>
+  </block>
+</view>

@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:360rpx">
+  <block wx:for="{{imgUrls}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item}}" class="slide_image"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="main">
+  <view class="itemButton notice" bindtap='notice'>
+    <text class="iconfont tongzhigonggao"></text>
+    <text>通知公告</text>
+  </view>
+  <view class="itemButton repairs" bindtap='repairs'>
+    <text class="iconfont weixiuguanli"></text>
+    <text>物业报修</text>
+  </view>
+  <view class="itemButton clean" bindtap='clean'>
+    <text class="iconfont jiazhengfuwu"></text>
+    <text>家政服务</text>
+  </view>
+  <view class="itemButton rent" bindtap='rent'>
+    <text class="iconfont fangwufangchan"></text>
+    <text>一键订水</text>
+  </view>
+  <view class="itemButton phone" bindtap='phone'>
+    <text class="iconfont dianhuahaoma"></text>
+    <text>常用电话</text>
+  </view>
+  <view class="itemButton suggest" bindtap='suggest'>
+    <text class="iconfont tousujianyi"></text>
+    <text>投诉表扬</text>
+  </view>
+</view>

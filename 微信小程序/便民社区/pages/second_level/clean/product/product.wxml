@@ -1,0 +1,41 @@
+<!--pages/second_level/clean/product/product.wxml-->
+<view class="page">
+  <view class="page_header">
+    <swiper>
+      <swiper-item>
+        <image src="{{img800}}/{{product.p_icon}}" mode="aspectFill" class="swiper-image"/>
+      </swiper-item>
+    </swiper>
+    <view class="header_info">
+      <text class="info_duration vc">{{product.p_duration}}分钟</text>
+      <view class="info_price vc">
+      线下价格:<text class="info_price_all">{{product.p_price}}元</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 中间name -->
+  <view class="page_title_wrap">
+    <view class="page_title fw_700">{{product.p_title}}</view>
+    <view><text class="page_title_price vc">{{product.p_price}}元</text></view>
+  </view>
+
+  <!-- 项目介绍 -->
+  <view class="project_item cc">
+    <view class="project_label cc">
+      <text class="project_label_val cc fw_600">项目介绍</text>
+    </view>
+    <view class="project_val">{{project.p_introduce}}</view>
+  </view>
+
+  <!-- 适用人群 -->
+  <view class="project_item cc">
+    <view class="project_label cc">
+      <text class="project_label_val cc fw_600">适用场景</text>
+    </view>
+    <view class="project_val">{{project.p_fit_people}}</view>
+  </view>
+  
+  <!-- 预约 -->
+  <view class="yuyue_wrap cc" bindtap="yuyueClick" data-id="{{product.p_id}}">一键预约</view>
+</view>

@@ -1,0 +1,17 @@
+/* pages/second_level/clean/order/orderProducts/orderProducts.wxss */
+page{
+  background-color:#f0f0f0;
+  height:100%;
+}
+.page{
+  font-family: "PingFang SC","Microsoft Yahei",Arial, Helvetica, sans-serif;
+  font-size:14px;
+  background-color:#f0f0f0;
+}
+.field_item{
+  display:flex;
+  flex-direction:row;
+  padding:10px;
+  border-bottom:1px #eaeaea solid;
+  background-color:#fff;
+}

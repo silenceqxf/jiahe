@@ -1,0 +1,43 @@
+<!--pages/second_level/clean/order/orderAddress/orderAddress.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="page">
+    <!-- 客户信息 -->
+    <view class="field_item vc">
+      <text class="field_item_label fw_700">姓名</text>
+      <view class="field_item_val"><input name="name" value="{{name}}" placeholder="请输入姓名"/></view>
+    </view>
+
+    <view class="field_item vc">
+      <text class="field_item_label fw_700">手机号码</text>
+      <view class="field_item_val"><input name="phone" value="{{phone}}" placeholder="您的手机号码"/></view>
+    </view>
+
+    <view class="field_item vc">
+      <text class="field_item_label fw_700">预约时间</text>
+      <picker class="field_item_val_2 vc" name="date" mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange"> <!-- picker动态时间选择器 -->
+        <view class="arrived_res vc">{{date}}</view>
+      </picker>
+
+      <picker class="field_item_val_2 vc" name="time" mode="time" value="{{time}}" start="{{startTime}}" end="{{endTime}}" bindchange="bindTimeChange">
+        <view class="arrived_res vc">{{time}}</view>
+      </picker>
+    </view>
+
+    <!-- 预约项目 -->
+    <view class="pro_info">
+      <view class="info_item">
+        <view class="item_left fw_700 vc">预约项目</view>
+        <view class="item_right" bindtap="pClick">
+          <text class="item_right_val">{{selectedInfo}}</text>
+          <view class="vc">
+            <image src="../../../../../images/icon_rightgo.png" mode="scaleToFill" class="p_icon"/>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <button formType="submit" class="field_ok fw_600 cc" hover-class="field_ok_hover">确定</button>
+  </view>
+</form>

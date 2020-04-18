@@ -1,0 +1,44 @@
+<!--pages/second_level/rent/order/order.wxml-->
+<view class='location' bindtap='chooseLocation'>
+  <view class='info' wx:if="{{destination}}">
+    <text class='info-address'>{{destination.address.name}} {{destination.address.detail}}</text>
+    <text class='info-consumer'>{{destination.name}}（{{destination.gender}}） {{destination.phone}}</text>
+  </view>
+  <view class='info' wx:if="{{!destination}}">
+    <text>选择收货地址</text>
+  </view>
+  <view class='modify'>
+    <image src='../../../../images/arrow_r.png'></image>
+  </view>
+</view>
+<view class='order-group'>
+  <view class='order'>
+    <view class='goods-group'>
+      <view class='goods' wx:for="{{cart}}" wx:key="goods_id">
+        <view class='left' data-goodsid='{{item.goods_id}}' bindtap='showGoods'>
+          <image mode='aspectFit' src='{{item.cover}}'></image>
+        </view>
+        <view class='right'>
+          <text class='goods-name'>{{item.name}}</text>
+          <view class='batch-group'>
+            <text class='price orange'>￥{{item.price}}</text>
+            <text class='num'> × {{item.cart_num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='remark'>
+    <text>备注：</text>
+    <textarea placeholder='订单备注' maxlength='240' bindinput='remarkChanged' value='{{remark}}'></textarea>
+  </view>
+</view>
+<view class='option'>
+  <view class='total'>
+    <text class='total-count'>共<text class='orange'> {{total_goods}} </text>件商品</text>
+    <text class='total-price'>共<text class='orange'>￥{{total_price}}</text></text>
+  </view>
+  <view class='deal' bindtap='pay'>
+    <text>现在付款</text>
+  </view>
+</view>
